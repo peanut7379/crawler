@@ -24,3 +24,45 @@ SwitchyOmega
 需要安装[证书](https://github.com/lightbody/browsermob-proxy/blob/master/browsermob-core/src/main/resources/sslSupport/ca-certificate-rsa.cer)
 下载这个文件，存到系统中。在Mac下打开“钥匙串访问”，将这个文件拖入docker图标中。
 然后双击打开证书详情，并选择始终信任。然后就可以直接访问SSL站点了。不过这个证书用作测试可以的，长期信任并不是一个好做法。这是一个公开证书，很容易被他人盗用。所以比较合理的方式是生成自己的证书。
+
+# 文件夹wandoujia
+为豌豆荚相关信息提取的demo，基于webmagic框架
+其中html元素提取使用xpath和正则表达式
+
+## Getting started:：
+添加maven依赖to your pom：
+```xml
+<dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-core</artifactId>
+            <version>0.7.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-extension</artifactId>
+            <version>0.7.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+                   <groupId>us.codecraft</groupId>
+                   <artifactId>webmagic-selenium</artifactId>
+                    <version>0.7.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+```
