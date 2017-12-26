@@ -1,4 +1,4 @@
-package cn.edu.hfut.dmic.webcollector.example;
+package com.ljd.crawler.processor;
 
 import cn.edu.hfut.dmic.webcollector.model.CrawlDatum;
 import cn.edu.hfut.dmic.webcollector.model.CrawlDatums;
